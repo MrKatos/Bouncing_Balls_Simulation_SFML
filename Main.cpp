@@ -12,7 +12,6 @@ class Particle : public sf::CircleShape
 public:
 	Particle(float radius)
 	{
-		//Szczerze, nie wiem po co nam ten konstruktor, skoro mamy ten poniżej :)
 		this->setRadius(radius);
 		this->setOrigin(radius, radius);
 		float x = std::rand() % 600;
@@ -38,7 +37,7 @@ public:
 	sf::Vector2f set_speed(sf::Vector2f& vec) { this->velocity.x = vec.x; this->velocity.y = vec.y; return vec; }
 
 private:
-	sf::Vector2f velocity; // dodałem od siebie, na pierwszy rzut mózgiem nie przyszedł mi lepszy pomysł jak inaczej to rozwiązać
+	sf::Vector2f velocity;
 	float speed = 0.1;
 };
 
